@@ -32,7 +32,7 @@ export default function Home(props) {
     <div className={styles.container}>
       <Head>
         <title>Alexandro</title>
-        <link rel="icon" href="/img/logo.png" />
+        <link rel="icon" href="/img/logo-min-min.png" />
       </Head>
       <Nav src="home" isMobileView={isMobileView}></Nav>
       <main className={styles.main}>
@@ -109,9 +109,9 @@ export default function Home(props) {
             }}
           >
             <Image src="/img/tools/django.jpeg" margin="auto"></Image>
-            <Image src="/img/tools/next.png" margin="auto"></Image>
-            <Image src="/img/tools/mongodb.png" margin="auto"></Image>
-            <Image src="/img/tools/chakra.png" margin="auto"></Image>
+            <Image src="/img/tools/next-min.png" margin="auto"></Image>
+            <Image src="/img/tools/mongodb-min.png" margin="auto"></Image>
+            <Image src="/img/tools/chakra-min.png" margin="auto"></Image>
           </Carousel>
         </Box>
       </main>
