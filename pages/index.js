@@ -108,7 +108,7 @@ export default function Home(props) {
               }
             }}
           >
-            <Image src="/img/tools/django.jpeg" margin="auto"></Image>
+            <Image src="/img/tools/django-min.jpeg" margin="auto"></Image>
             <Image src="/img/tools/next-min.png" margin="auto"></Image>
             <Image src="/img/tools/mongodb-min.png" margin="auto"></Image>
             <Image src="/img/tools/chakra-min.png" margin="auto"></Image>
