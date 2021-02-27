@@ -88,7 +88,7 @@ export default function Home(props) {
             <br />
             tools and frameworks
           </Heading>
-          <Text color="gray" mt="5px" mb="100px">
+          <Text color="gray" mt="5px">
             Just some personal favorites... 😎️
           </Text>
         </Box>
@@ -108,22 +108,10 @@ export default function Home(props) {
               }
             }}
           >
-            <Image
-              src="/img/tools/django.jpeg"
-              maxW="400px"
-              margin="auto"
-            ></Image>
-            <Image src="/img/tools/next.png" maxW="400px" margin="auto"></Image>
-            <Image
-              src="/img/tools/mongodb.png"
-              maxW="400px"
-              margin="auto"
-            ></Image>
-            <Image
-              src="/img/tools/chakra.png"
-              maxW="400px"
-              margin="auto"
-            ></Image>
+            <Image src="/img/tools/django.jpeg" margin="auto"></Image>
+            <Image src="/img/tools/next.png" margin="auto"></Image>
+            <Image src="/img/tools/mongodb.png" margin="auto"></Image>
+            <Image src="/img/tools/chakra.png" margin="auto"></Image>
           </Carousel>
         </Box>
       </main>

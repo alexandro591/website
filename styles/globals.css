@@ -51,5 +51,10 @@ a {
   box-shadow: 0 0 1px 3px rgb(0, 116, 170) !important;
 }
 .rec .rec-item-wrapper {
-  height: 400px;
+  height: 300px;
+  width: auto;
+}
+.rec .rec-item-wrapper img {
+  width: 300px;
+  height: auto;
 }
