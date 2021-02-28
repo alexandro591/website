@@ -1,0 +1,68 @@
+$main-color: rgb(38, 38, 38);
+$main-primarycolor: rgb(0, 255, 157);
+$main-secondarycolor: rgb(12, 174, 112);
+.navbar {
+  position: fixed;
+  height: 100%;
+  background-color: $main-color;
+  display: grid;
+  grid-template-columns: 80px;
+  grid-template-rows: 100px auto 100px;
+  -webkit-box-shadow: 5px 4px 12px 3px #1a1a1a;
+  box-shadow: 5px 4px 12px 3px rgb(26, 26, 26);
+  img {
+    margin-top: 10px;
+    width: 90px;
+    height: 98px;
+  }
+  .navbar_options {
+    color: $main-primarycolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      cursor: pointer;
+      margin: 20px;
+      width: 40px;
+      height: 40px;
+      transition: 0.3s;
+    }
+    svg:hover {
+      margin: 30px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.main {
+  color: white;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: auto;
+  height: 100vh;
+  background: linear-gradient(130deg, rgb(31, 31, 31) 40%, $main-color 40%);
+  margin-left: 80px;
+  .title {
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    font-size: 20px;
+    color: white;
+    span {
+      color: $main-secondarycolor;
+      font-weight: bolder;
+    }
+  }
+  button {
+    margin: 15px;
+  }
+  button:hover {
+    background: $main-secondarycolor;
+    transform: scale(1.2);
+  }
+  img {
+    border-radius: 15px;
+  }
+}

@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  height: 100%;
+  background-color: #262626;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px;
+      grid-template-columns: 80px;
+  -ms-grid-rows: 100px auto 100px;
+      grid-template-rows: 100px auto 100px;
+  -webkit-box-shadow: 5px 4px 12px 3px #1a1a1a;
+  box-shadow: 5px 4px 12px 3px #1a1a1a;
+}
+
+.navbar img {
+  margin-top: 10px;
+  width: 90px;
+  height: 98px;
+}
+
+.navbar .navbar_options {
+  color: #00ff9d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar_options svg {
+  cursor: pointer;
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .navbar_options svg:hover {
+  margin: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.main {
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 0.5fr;
+      grid-template-columns: 0.5fr 0.5fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  height: 100vh;
+  background: linear-gradient(130deg, #1f1f1f 40%, #262626 40%);
+  margin-left: 80px;
+}
+
+.main .title {
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  font-size: 20px;
+  color: white;
+}
+
+.main .title span {
+  color: #0cae70;
+  font-weight: bolder;
+}
+
+.main button {
+  margin: 15px;
+}
+
+.main button:hover {
+  background: #0cae70;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main img {
+  border-radius: 15px;
+}
+/*# sourceMappingURL=Global.module.css.map */
