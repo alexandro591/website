@@ -1,5 +1,5 @@
 import { Box, Text, Image, Heading, Button } from "@chakra-ui/react";
-import { Icon } from "@chakra-ui/icons";
+import { Icon, CheckCircleIcon } from "@chakra-ui/icons";
 import {
   MdHome,
   MdPerson,
@@ -29,6 +29,7 @@ export {
   Icon,
   Heading,
   Button,
+  CheckCircleIcon,
   IconMdHome,
   IconMdPerson,
   IconMdInsertDriveFile,

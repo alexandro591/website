@@ -41,13 +41,12 @@ $main-secondarycolor: rgb(12, 174, 112);
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   grid-template-rows: auto;
-  height: 100vh;
-  background: linear-gradient(130deg, rgb(31, 31, 31) 40%, $main-color 40%);
+  min-height: 100vh;
+  background: rgb(31, 31, 31);
   margin-left: 80px;
   .title {
     margin: auto;
-    width: 70%;
-    height: 70%;
+    padding: 20%;
     font-size: 20px;
     color: white;
     span {
@@ -64,5 +63,17 @@ $main-secondarycolor: rgb(12, 174, 112);
   }
   img {
     border-radius: 15px;
+  }
+  .technologies {
+    font-size: 14px;
+    padding: 15px;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
   }
 }

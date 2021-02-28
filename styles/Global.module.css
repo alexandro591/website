@@ -58,15 +58,14 @@
       grid-template-columns: 0.5fr 0.5fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  height: 100vh;
-  background: linear-gradient(130deg, #1f1f1f 40%, #262626 40%);
+  min-height: 100vh;
+  background: #1f1f1f;
   margin-left: 80px;
 }
 
 .main .title {
   margin: auto;
-  width: 70%;
-  height: 70%;
+  padding: 20%;
   font-size: 20px;
   color: white;
 }
@@ -88,5 +87,20 @@
 
 .main img {
   border-radius: 15px;
+}
+
+.main .technologies {
+  font-size: 14px;
+  padding: 15px;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+  }
 }
 /*# sourceMappingURL=Global.module.css.map */
