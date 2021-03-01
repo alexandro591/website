@@ -91,6 +91,8 @@ $main-secondarycolor: rgb(12, 174, 112);
       .buttonContainer {
         margin: auto;
         margin-top: 20px;
+        width: 80%;
+        max-width: 400px;
       }
       padding: 10%;
     }
