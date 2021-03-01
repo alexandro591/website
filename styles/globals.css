@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.root {
+  background: rgb(38, 38, 38);
+}
+
 * {
   box-sizing: border-box;
 }

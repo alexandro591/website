@@ -81,7 +81,7 @@ function Main() {
 
 export default function Home() {
   return (
-    <div>
+    <div className="root">
       <Head>
         <title>Alexandro</title>
         <link rel="icon" href="/logo.png" />
