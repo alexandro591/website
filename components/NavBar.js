@@ -42,6 +42,7 @@ export default function NavBar(props) {
               }
             }}
           />
+          <Box className={styles.roar}>Ahggg!</Box>
         </Box>
         <Box className={styles.navbar_options}>
           <Box>
@@ -54,7 +55,11 @@ export default function NavBar(props) {
               <IconMdPerson></IconMdPerson>
             </Text>
           </Box>
-          <Box>
+          <Box
+            onClick={(e) => {
+              window.open("/Alexandro Tapia - CV.pdf");
+            }}
+          >
             <Text className={src === "resume" ? styles.select : ""}>
               <IconMdInsertDriveFile></IconMdInsertDriveFile>
             </Text>

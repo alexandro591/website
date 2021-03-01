@@ -28,7 +28,13 @@ function Main() {
             <Button color="white.400" background="green.600">
               About me
             </Button>
-            <Button color="white.400" background="green.600">
+            <Button
+              color="white.400"
+              background="green.600"
+              onClick={(e) => {
+                window.open("/Alexandro Tapia - CV.pdf");
+              }}
+            >
               Resume
             </Button>
             <Button color="white.400" background="green.600">
@@ -53,7 +59,7 @@ function Main() {
             <Text>
               <CheckCircleIcon color="green.400"></CheckCircleIcon>{" "}
               <b>
-                Experience designing, creating, managin and maintaining
+                Experience designing, creating, managing and maintaining
                 databases in:
               </b>
             </Text>

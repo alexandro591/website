@@ -10,6 +10,15 @@ $main-secondarycolor: rgb(12, 174, 112);
   grid-template-rows: 100px auto 100px;
   -webkit-box-shadow: 5px 4px 12px 3px #1a1a1a;
   box-shadow: 5px 4px 12px 3px rgb(26, 26, 26);
+  .roar {
+    position: fixed;
+    top: 40px;
+    left: 90px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
+  }
   img {
     margin-top: 10px;
     width: 90px;
@@ -95,6 +104,7 @@ $main-secondarycolor: rgb(12, 174, 112);
         max-width: 400px;
       }
       padding: 10%;
+      padding-top: 20%;
     }
   }
 }
