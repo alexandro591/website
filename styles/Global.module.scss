@@ -20,9 +20,10 @@ $main-secondarycolor: rgb(12, 174, 112);
     background-color: rgb(44, 44, 44);
   }
   img {
+    cursor: pointer;
     margin-top: 10px;
     width: 90px;
-    height: 98px;
+    height: 95px;
   }
   .navbar_options {
     color: $main-primarycolor;
