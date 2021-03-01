@@ -82,6 +82,10 @@ function Main() {
 export default function Home() {
   return (
     <div className="root">
+      <meta name="theme-color" content="#00ff9d" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="#00ff9d" />
+
       <Head>
         <title>Alexandro</title>
         <link rel="icon" href="/logo.png" />
