@@ -1,7 +1,10 @@
 import styles from "../styles/Global.module.css";
 import { Box, Text, Button, CheckCircleIcon } from "../shared/chakra";
+import { SrcContext } from "../context/src";
+import { useContext } from "react";
 
 export default function Home() {
+  const { src, setSrc } = useContext(SrcContext);
   return (
     <>
       <Box className={styles.main}>
@@ -12,7 +15,13 @@ export default function Home() {
           </h1>
           <Text>Django - Next - Chakra ❤️</Text>
           <Box className={styles.buttonContainer}>
-            <Button color="white.400" background="green.600">
+            <Button
+              color="white.400"
+              background="green.600"
+              onClick={(e) => {
+                setSrc("about");
+              }}
+            >
               About me
             </Button>
             <Button
@@ -24,7 +33,13 @@ export default function Home() {
             >
               Resume
             </Button>
-            <Button color="white.400" background="green.600">
+            <Button
+              color="white.400"
+              background="green.600"
+              onClick={(e) => {
+                setSrc("contact");
+              }}
+            >
               Contact me
             </Button>
           </Box>

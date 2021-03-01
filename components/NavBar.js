@@ -10,7 +10,7 @@ import {
   IconMdInsertDriveFile,
   IconMdMyLocation,
 } from "../shared/chakra";
-export default function NavBar(props) {
+export default function NavBar() {
   const [playerStatus, setPlayerStatus] = useState(false);
   const [audio, setAudio] = useState(null);
   const roar = useRef(null);
