@@ -130,7 +130,6 @@
   }
   .main .title {
     padding: 10%;
-    padding-top: 20%;
   }
   .main .title .heading {
     font-size: 8vw;
@@ -140,6 +139,9 @@
     margin-top: 20px;
     width: 80%;
     max-width: 400px;
+  }
+  .main .titleFirst {
+    padding-top: 30%;
   }
 }
 /*# sourceMappingURL=Global.module.css.map */

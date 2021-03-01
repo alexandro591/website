@@ -18,7 +18,7 @@ function Main() {
   return (
     <>
       <Box className={styles.main}>
-        <Box className={styles.title}>
+        <Box className={styles.title + " " + styles.titleFirst}>
           <span>Hi visitor!</span>
           <h1 className={styles.heading}>
             I'm <span>ALEXANDRO TAPIA</span>
