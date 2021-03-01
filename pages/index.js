@@ -84,7 +84,7 @@ export default function App() {
           position="fixed"
           fontSize="24px"
           left="20px"
-          bottom="20px"
+          bottom="30px"
           borderRadius="100%"
           zIndex="9999999"
           onClick={() => {

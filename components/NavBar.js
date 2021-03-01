@@ -31,7 +31,8 @@ export default function NavBar(props) {
     <>
       <Box
         className={styles.navbar}
-        visibility={!navVisitble ? "hidden" : "inherit"}
+        left={!navVisitble ? "-80px" : "0"}
+        transform={!navVisitble ? "scale(0)" : "scale(1)"}
       >
         <Box w="100px">
           <Image

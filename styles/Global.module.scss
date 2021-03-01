@@ -2,6 +2,7 @@ $main-color: rgb(38, 38, 38);
 $main-primarycolor: rgb(0, 255, 157);
 $main-secondarycolor: rgb(12, 174, 112);
 .navbar {
+  transition: 0.5s;
   position: fixed;
   height: 100%;
   background-color: $main-color;
