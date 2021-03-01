@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { SrcContext } from "../context/src";
+import { SrcContext } from "../context/Src";
 import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {

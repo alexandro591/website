@@ -1,6 +1,6 @@
 import styles from "../styles/Global.module.css";
 import { Box, Text, Button, CheckCircleIcon } from "../shared/chakra";
-import { SrcContext } from "../context/src";
+import { SrcContext } from "../context/Src";
 import { useContext } from "react";
 
 export default function Home() {

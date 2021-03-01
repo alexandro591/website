@@ -1,6 +1,6 @@
 import styles from "../styles/Global.module.css";
 import { useContext, useEffect, useRef, useState } from "react";
-import { SrcContext } from "../context/src";
+import { SrcContext } from "../context/Src";
 import {
   Box,
   Image,

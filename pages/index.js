@@ -2,7 +2,7 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Home from "../components/Home";
 import About from "../components/About";
-import { SrcContext } from "../context/src";
+import { SrcContext } from "../context/Src";
 import styles from "../styles/Global.module.css";
 import {
   Box,
