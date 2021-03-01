@@ -20,11 +20,11 @@ function Main() {
       <Box className={styles.main}>
         <Box className={styles.title}>
           <span>Hi visitor!</span>
-          <Heading as="h1" fontSize="7xl">
+          <h1 className={styles.heading}>
             I'm <span>ALEXANDRO TAPIA</span>
-          </Heading>
+          </h1>
           <Text>Django - Next - Chakra ❤️</Text>
-          <Box display="flex" flexDir="column" w="150px">
+          <Box className={styles.buttonContainer}>
             <Button color="white.400" background="green.600">
               About me
             </Button>
@@ -36,7 +36,7 @@ function Main() {
             </Button>
           </Box>
         </Box>
-        <Box className={styles.title}>
+        <Box className={styles.title + " " + styles.technologiesContainer}>
           <Box>
             <Text>
               <CheckCircleIcon color="green.400"></CheckCircleIcon>{" "}

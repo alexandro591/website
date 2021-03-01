@@ -45,13 +45,22 @@ $main-secondarycolor: rgb(12, 174, 112);
   background: rgb(31, 31, 31);
   margin-left: 80px;
   .title {
+    .heading {
+      font-size: 4vw;
+      font-weight: bolder;
+    }
     margin: auto;
-    padding: 20%;
+    padding: 15%;
     font-size: 20px;
     color: white;
     span {
       color: $main-secondarycolor;
       font-weight: bolder;
+    }
+    .buttonContainer {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
     }
   }
   button {
@@ -71,9 +80,19 @@ $main-secondarycolor: rgb(12, 174, 112);
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1180px) {
   .main {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+    .title {
+      .heading {
+        font-size: 8vw;
+      }
+      .buttonContainer {
+        margin: auto;
+        margin-top: 20px;
+      }
+      padding: 10%;
+    }
   }
 }

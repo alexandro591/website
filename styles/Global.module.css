@@ -65,14 +65,30 @@
 
 .main .title {
   margin: auto;
-  padding: 20%;
+  padding: 15%;
   font-size: 20px;
   color: white;
+}
+
+.main .title .heading {
+  font-size: 4vw;
+  font-weight: bolder;
 }
 
 .main .title span {
   color: #0cae70;
   font-weight: bolder;
+}
+
+.main .title .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
 }
 
 .main button {
@@ -95,12 +111,22 @@
   text-align: right;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1180px) {
   .main {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
+  }
+  .main .title {
+    padding: 10%;
+  }
+  .main .title .heading {
+    font-size: 8vw;
+  }
+  .main .title .buttonContainer {
+    margin: auto;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=Global.module.css.map */
