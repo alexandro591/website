@@ -1,5 +1,6 @@
 import styles from "../styles/Global.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { SrcContext } from "../context/src";
 import {
   Box,
   Image,
@@ -10,10 +11,10 @@ import {
   IconMdMyLocation,
 } from "../shared/chakra";
 export default function NavBar(props) {
-  const { src } = props;
   const [playerStatus, setPlayerStatus] = useState(false);
   const [audio, setAudio] = useState(null);
   const roar = useRef(null);
+  const { src, setSrc } = useContext(SrcContext);
 
   useEffect(() => {
     if (audio) {
@@ -75,12 +76,22 @@ export default function NavBar(props) {
         </Box>
         <Box className={styles.navbar_options}>
           <Box>
-            <Text className={src === "home" ? styles.select : ""}>
+            <Text
+              className={src === "home" ? styles.select : ""}
+              onClick={(e) => {
+                setSrc("home");
+              }}
+            >
               <IconMdHome></IconMdHome>
             </Text>
           </Box>
           <Box>
-            <Text className={src === "about" ? styles.select : ""}>
+            <Text
+              className={src === "about" ? styles.select : ""}
+              onClick={(e) => {
+                setSrc("about");
+              }}
+            >
               <IconMdPerson></IconMdPerson>
             </Text>
           </Box>
@@ -94,7 +105,12 @@ export default function NavBar(props) {
             </Text>
           </Box>
           <Box>
-            <Text className={src === "contact" ? styles.select : ""}>
+            <Text
+              className={src === "contact" ? styles.select : ""}
+              onClick={(e) => {
+                setSrc("contact");
+              }}
+            >
               <IconMdMyLocation></IconMdMyLocation>
             </Text>
           </Box>
