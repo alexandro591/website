@@ -3,11 +3,14 @@ import { Box, Text, Button, CheckCircleIcon } from "../shared/chakra";
 import { SrcContext } from "../context/Src";
 import { useContext } from "react";
 
-export default function Home() {
+export default function Home(props) {
+  const { fullScreen } = props;
   const { src, setSrc } = useContext(SrcContext);
   return (
     <>
-      <Box className={styles.main}>
+      <Box
+        className={styles.main + (fullScreen ? " " + styles.fullScreen : "")}
+      >
         <Box className={styles.title + " " + styles.titleFirst}>
           <span>Hi visitor!</span>
           <h1 className={styles.heading}>

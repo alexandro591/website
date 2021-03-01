@@ -5,12 +5,14 @@ import {
   Box,
   Image,
   Text,
+  Button,
   IconMdHome,
   IconMdPerson,
   IconMdInsertDriveFile,
   IconMdMyLocation,
 } from "../shared/chakra";
-export default function NavBar() {
+export default function NavBar(props) {
+  const { navVisitble } = props;
   const [playerStatus, setPlayerStatus] = useState(false);
   const [audio, setAudio] = useState(null);
   const roar = useRef(null);
@@ -27,7 +29,10 @@ export default function NavBar() {
 
   return (
     <>
-      <Box className={styles.navbar}>
+      <Box
+        className={styles.navbar}
+        visibility={!navVisitble ? "hidden" : "inherit"}
+      >
         <Box w="100px">
           <Image
             src="/logo.png"

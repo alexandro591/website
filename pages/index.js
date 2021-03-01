@@ -21,6 +21,8 @@ import { useContext, useEffect, useState } from "react";
 
 export default function App() {
   const { src, setSrc } = useContext(SrcContext);
+  const [navVisitble, setNavVisible] = useState(true);
+
   useEffect(() => {
     axios.post("/api/track_visitor", {
       name: "alex",
@@ -60,13 +62,13 @@ export default function App() {
         />
         <script dangerouslySetInnerHTML={{ __html: `` }} />
       </Head>
-      <NavBar></NavBar>
+      <NavBar navVisitble={navVisitble}></NavBar>
       {(() => {
         if (src === "home") {
-          return <Home></Home>;
+          return <Home fullScreen={!navVisitble}></Home>;
         }
         if (src === "about") {
-          return <About></About>;
+          return <About fullScreen={!navVisitble}></About>;
         }
       })()}
       <div id="fb-root"></div>
@@ -75,6 +77,26 @@ export default function App() {
         attribution="setup_tool"
         page_id="101039808207496"
       ></div>
+      <Box>
+        <Button
+          w="40px"
+          h="40px"
+          position="fixed"
+          fontSize="24px"
+          left="20px"
+          bottom="20px"
+          borderRadius="100%"
+          zIndex="9999999"
+          onClick={() => {
+            setNavVisible(!navVisitble);
+          }}
+          transition="2s"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {navVisitble ? "✖️" : "📃️"}
+        </Button>
+      </Box>
     </div>
   );
 }
