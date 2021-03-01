@@ -10,6 +10,7 @@ $main-secondarycolor: rgb(12, 174, 112);
   grid-template-rows: 100px auto 100px;
   -webkit-box-shadow: 5px 4px 12px 3px #1a1a1a;
   box-shadow: 5px 4px 12px 3px rgb(26, 26, 26);
+  z-index: 999;
   .roar {
     position: fixed;
     top: 40px;
@@ -104,6 +105,8 @@ $main-secondarycolor: rgb(12, 174, 112);
   .main {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+    padding-bottom: 100px;
+
     .title {
       .heading {
         font-size: 8vw;
