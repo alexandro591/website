@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Home from "../components/Home";
 import About from "../components/About";
 import { SrcContext } from "../context/Src";
+import axios from "axios";
 import styles from "../styles/Global.module.css";
 import {
   Box,
@@ -20,6 +21,12 @@ import { useContext, useEffect, useState } from "react";
 
 export default function App() {
   const { src, setSrc } = useContext(SrcContext);
+  useEffect(() => {
+    axios.post("/api/track_visitor", {
+      name: "alex",
+      uuid: "sdfas",
+    });
+  }, []);
   return (
     <div className="root">
       <meta name="theme-color" content="#00ff9d" />
