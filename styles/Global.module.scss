@@ -19,6 +19,10 @@ $main-secondarycolor: rgb(12, 174, 112);
     border-radius: 10px;
     background-color: rgb(44, 44, 44);
     transition: 1s;
+    animation-name: heart;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   img {
     cursor: pointer;
@@ -58,6 +62,8 @@ $main-secondarycolor: rgb(12, 174, 112);
   min-height: 100vh;
   background: rgb(31, 31, 31);
   margin-left: 80px;
+  z-index: 0;
+
   .title {
     .heading {
       font-size: 4vw;
@@ -113,5 +119,32 @@ $main-secondarycolor: rgb(12, 174, 112);
     .titleFirst {
       padding-top: 30%;
     }
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
   }
 }

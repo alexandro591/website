@@ -25,30 +25,6 @@ export default function NavBar() {
     }
   }, [audio]);
 
-  useEffect(() => {
-    let counter = 0;
-    setInterval(() => {
-      if (roar.current.style.transform != "scale(0)") {
-        if (roar.current.style.transform == "scale(1.2)")
-          roar.current.style.transform = "scale(1)";
-        else roar.current.style.transform = "scale(1.2)";
-        counter++;
-      }
-      if (
-        counter >= 10 &&
-        (roar.current.style.transform == "scale(1)" ||
-          roar.current.style.transform == "scale(1.2)")
-      ) {
-        roar.current.style.transform = "scale(0)";
-      }
-      if (counter >= 20 && roar.current.style.transform == "scale(0)") {
-        roar.current.style.transform = "scale(1.2)";
-        counter = 0;
-      }
-      counter++;
-    }, 700);
-  }, [roar]);
-
   return (
     <>
       <Box className={styles.navbar}>
