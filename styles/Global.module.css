@@ -15,11 +15,13 @@
 .navbar .roar {
   position: fixed;
   top: 40px;
-  left: 90px;
+  left: 100px;
   color: white;
   padding: 10px;
   border-radius: 10px;
   background-color: #2c2c2c;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .navbar img {

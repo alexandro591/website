@@ -13,11 +13,12 @@ $main-secondarycolor: rgb(12, 174, 112);
   .roar {
     position: fixed;
     top: 40px;
-    left: 90px;
+    left: 100px;
     color: white;
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(44, 44, 44);
+    transition: 1s;
   }
   img {
     cursor: pointer;

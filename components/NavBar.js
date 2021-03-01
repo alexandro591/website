@@ -1,5 +1,5 @@
 import styles from "../styles/Global.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Box,
   Image,
@@ -13,6 +13,8 @@ export default function NavBar(props) {
   const { src } = props;
   const [playerStatus, setPlayerStatus] = useState(false);
   const [audio, setAudio] = useState(null);
+  const roar = useRef(null);
+
   useEffect(() => {
     if (audio) {
       audio.oncanplaythrough = function () {
@@ -21,6 +23,31 @@ export default function NavBar(props) {
       };
     }
   }, [audio]);
+
+  useEffect(() => {
+    let counter = 0;
+    setInterval(() => {
+      if (roar.current.style.transform != "scale(0)") {
+        if (roar.current.style.transform == "scale(1.2)")
+          roar.current.style.transform = "scale(1)";
+        else roar.current.style.transform = "scale(1.2)";
+        counter++;
+      }
+      if (
+        counter >= 10 &&
+        (roar.current.style.transform == "scale(1)" ||
+          roar.current.style.transform == "scale(1.2)")
+      ) {
+        roar.current.style.transform = "scale(0)";
+      }
+      if (counter >= 20 && roar.current.style.transform == "scale(0)") {
+        roar.current.style.transform = "scale(1.2)";
+        counter = 0;
+      }
+      counter++;
+    }, 700);
+  }, [roar]);
+
   return (
     <>
       <Box className={styles.navbar}>
@@ -42,7 +69,9 @@ export default function NavBar(props) {
               }
             }}
           />
-          <Box className={styles.roar}>Ahggg!</Box>
+          <Box className={styles.roar} ref={roar}>
+            Ahggg!
+          </Box>
         </Box>
         <Box className={styles.navbar_options}>
           <Box>
