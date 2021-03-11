@@ -45,7 +45,7 @@ export default function About(props) {
           ]}
           date="Jan 2020 - Current"
           description="Full stack developer, specialist in Backend and DevOps."
-          title="🎓 Kings of Binary"
+          title="💼 Kings of Binary"
         ></TimelineELement>
 
         <TimelineELement
@@ -60,7 +60,7 @@ export default function About(props) {
           ]}
           date="Oct 2020 - Current"
           description="Full stack developer, specialist in Backend and DevOps."
-          title="🎓 Devsu"
+          title="💼 Devsu"
         ></TimelineELement>
       </Box>
     </>
