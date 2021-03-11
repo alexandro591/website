@@ -23,7 +23,7 @@ export default function TimelineELement(props) {
           <hr></hr>
           <Box>
             {skills.map((skill) => (
-              <Button background="green.400">{skill}</Button>
+              <Button background="green.600">{skill}</Button>
             ))}
           </Box>
         </Box>
