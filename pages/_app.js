@@ -1,15 +1,17 @@
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { SrcContext } from "../context/Src";
+import { ViewRouteContext } from "../context/ViewRoute";
 import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const [src, setSrc] = useState("home");
+  const [viewRoute, setViewRoute] = useState("home");
   return (
     <ChakraProvider>
-      <SrcContext.Provider value={{ src: src, setSrc: setSrc }}>
+      <ViewRouteContext.Provider
+        value={{ viewRoute: viewRoute, setViewRoute: setViewRoute }}
+      >
         <Component {...pageProps} />
-      </SrcContext.Provider>
+      </ViewRouteContext.Provider>
     </ChakraProvider>
   );
 }

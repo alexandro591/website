@@ -2,7 +2,8 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Home from "../components/Home";
 import About from "../components/About";
-import { SrcContext } from "../context/Src";
+import Contact from "../components/Contact";
+import { ViewRouteContext } from "../context/ViewRoute";
 import axios from "axios";
 import styles from "../styles/Global.module.css";
 import {
@@ -16,11 +17,13 @@ import {
   Heading,
   Button,
   CheckCircleIcon,
+  IconIoMdEye,
+  IconIoMdEyeOff,
 } from "../shared/chakra";
 import { useContext, useEffect, useState } from "react";
 
 export default function App() {
-  const { src, setSrc } = useContext(SrcContext);
+  const { viewRoute, setViewRoute } = useContext(ViewRouteContext);
   const [navVisitble, setNavVisible] = useState(true);
 
   useEffect(() => {
@@ -64,11 +67,14 @@ export default function App() {
       </Head>
       <NavBar navVisitble={navVisitble}></NavBar>
       {(() => {
-        if (src === "home") {
+        if (viewRoute === "home") {
           return <Home fullScreen={!navVisitble}></Home>;
         }
-        if (src === "about") {
+        if (viewRoute === "about") {
           return <About fullScreen={!navVisitble}></About>;
+        }
+        if (viewRoute === "contact") {
+          return <Contact fullScreen={!navVisitble}></Contact>;
         }
       })()}
       <div id="fb-root"></div>
@@ -94,7 +100,7 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
         >
-          {navVisitble ? "✖️" : "📃️"}
+          {navVisitble ? IconIoMdEyeOff() : IconIoMdEye()}
         </Button>
       </Box>
     </div>

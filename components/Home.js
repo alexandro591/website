@@ -1,11 +1,11 @@
 import styles from "../styles/Global.module.css";
 import { Box, Text, Button, CheckCircleIcon } from "../shared/chakra";
-import { SrcContext } from "../context/Src";
+import { ViewRouteContext } from "../context/ViewRoute";
 import { useContext } from "react";
 
 export default function Home(props) {
   const { fullScreen } = props;
-  const { src, setSrc } = useContext(SrcContext);
+  const { _, setViewRoute } = useContext(ViewRouteContext);
   return (
     <>
       <Box
@@ -22,7 +22,7 @@ export default function Home(props) {
               color="white.400"
               background="green.600"
               onClick={(e) => {
-                setSrc("about");
+                setViewRoute("about");
               }}
             >
               About me
@@ -40,7 +40,7 @@ export default function Home(props) {
               color="white.400"
               background="green.600"
               onClick={(e) => {
-                setSrc("contact");
+                setViewRoute("contact");
               }}
             >
               Contact me

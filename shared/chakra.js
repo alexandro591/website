@@ -7,6 +7,8 @@ import {
   MdMyLocation,
 } from "react-icons/md";
 
+import { IoMdEyeOff, IoMdEye } from "react-icons/io";
+
 function IconMdHome() {
   return <Icon as={MdHome}></Icon>;
 }
@@ -22,6 +24,14 @@ function IconMdMyLocation() {
   return <Icon as={MdMyLocation}></Icon>;
 }
 
+function IconIoMdEye() {
+  return <Icon as={IoMdEye}></Icon>;
+}
+
+function IconIoMdEyeOff() {
+  return <Icon as={IoMdEyeOff}></Icon>;
+}
+
 export {
   Box,
   Text,
@@ -34,4 +44,6 @@ export {
   IconMdPerson,
   IconMdInsertDriveFile,
   IconMdMyLocation,
+  IconIoMdEye,
+  IconIoMdEyeOff,
 };

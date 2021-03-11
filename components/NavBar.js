@@ -1,11 +1,10 @@
 import styles from "../styles/Global.module.css";
 import { useContext, useEffect, useRef, useState } from "react";
-import { SrcContext } from "../context/Src";
+import { ViewRouteContext } from "../context/ViewRoute";
 import {
   Box,
   Image,
   Text,
-  Button,
   IconMdHome,
   IconMdPerson,
   IconMdInsertDriveFile,
@@ -16,7 +15,7 @@ export default function NavBar(props) {
   const [playerStatus, setPlayerStatus] = useState(false);
   const [audio, setAudio] = useState(null);
   const roar = useRef(null);
-  const { src, setSrc } = useContext(SrcContext);
+  const { viewRoute, setViewRoute } = useContext(ViewRouteContext);
 
   useEffect(() => {
     if (audio) {
@@ -59,9 +58,9 @@ export default function NavBar(props) {
         <Box className={styles.navbar_options}>
           <Box>
             <Text
-              className={src === "home" ? styles.select : ""}
+              className={viewRoute === "home" ? styles.select : ""}
               onClick={(e) => {
-                setSrc("home");
+                setViewRoute("home");
               }}
             >
               <IconMdHome></IconMdHome>
@@ -69,9 +68,9 @@ export default function NavBar(props) {
           </Box>
           <Box>
             <Text
-              className={src === "about" ? styles.select : ""}
+              className={viewRoute === "about" ? styles.select : ""}
               onClick={(e) => {
-                setSrc("about");
+                setViewRoute("about");
               }}
             >
               <IconMdPerson></IconMdPerson>
@@ -82,15 +81,15 @@ export default function NavBar(props) {
               window.open("/Alexandro Tapia - CV.pdf");
             }}
           >
-            <Text className={src === "resume" ? styles.select : ""}>
+            <Text className={viewRoute === "resume" ? styles.select : ""}>
               <IconMdInsertDriveFile></IconMdInsertDriveFile>
             </Text>
           </Box>
           <Box>
             <Text
-              className={src === "contact" ? styles.select : ""}
+              className={viewRoute === "contact" ? styles.select : ""}
               onClick={(e) => {
-                setSrc("contact");
+                setViewRoute("contact");
               }}
             >
               <IconMdMyLocation></IconMdMyLocation>

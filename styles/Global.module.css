@@ -75,7 +75,7 @@
   height: 50px;
 }
 
-.main {
+.main, .about {
   color: white;
   display: -ms-grid;
   display: grid;
@@ -98,28 +98,28 @@
   scrollbar-width: none;
 }
 
-.main::-webkit-scrollbar {
+.main::-webkit-scrollbar, .about::-webkit-scrollbar {
   display: none;
 }
 
-.main .title {
+.main .title, .about .title {
   margin: auto;
   padding: 15%;
   font-size: 20px;
   color: white;
 }
 
-.main .title .heading {
+.main .title .heading, .about .title .heading {
   font-size: 4vw;
   font-weight: bolder;
 }
 
-.main .title span {
+.main .title span, .about .title span {
   color: #0cae70;
   font-weight: bolder;
 }
 
-.main .title .buttonContainer {
+.main .title .buttonContainer, .about .title .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,51 +130,51 @@
   width: 200px;
 }
 
-.main button {
+.main button, .about button {
   margin: 15px;
 }
 
-.main button:hover {
+.main button:hover, .about button:hover {
   background: #0cae70;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.main img {
+.main img, .about img {
   border-radius: 15px;
 }
 
-.main .technologies {
+.main .technologies, .about .technologies {
   font-size: 14px;
   padding: 15px;
   text-align: right;
 }
 
-.main.fullScreen {
+.main.fullScreen, .fullScreen.about {
   left: 0;
 }
 
 @media only screen and (max-width: 1180px) {
-  .main {
+  .main, .about {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
     padding-bottom: 100px;
   }
-  .main .title {
+  .main .title, .about .title {
     padding: 10%;
   }
-  .main .title .heading {
+  .main .title .heading, .about .title .heading {
     font-size: 8vw;
   }
-  .main .title .buttonContainer {
+  .main .title .buttonContainer, .about .title .buttonContainer {
     margin: auto;
     margin-top: 20px;
     width: 80%;
     max-width: 400px;
   }
-  .main .titleFirst {
+  .main .titleFirst, .about .titleFirst {
     padding-top: 30%;
   }
 }
@@ -247,5 +247,30 @@
     -webkit-transform: scale(0);
             transform: scale(0);
   }
+}
+
+.about {
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 2%;
+}
+
+.about button {
+  cursor: default;
+}
+
+.about .timelineContainer {
+  max-width: 600px;
+}
+
+.about .timelineDate {
+  font-size: 25px;
+  margin: 20px;
+}
+
+.about b {
+  font-size: 20px;
 }
 /*# sourceMappingURL=Global.module.css.map */
