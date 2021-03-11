@@ -250,10 +250,6 @@
 }
 
 .about {
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
   padding: 2%;
 }
 
@@ -270,7 +266,18 @@
   margin: 15px;
 }
 
+.about img {
+  padding: 30px;
+  width: 500px;
+}
+
 .about b {
   font-size: 20px;
+}
+
+@media only screen and (min-width: 1180px) {
+  .timelinesContainer {
+    overflow-y: auto;
+  }
 }
 /*# sourceMappingURL=Global.module.css.map */
