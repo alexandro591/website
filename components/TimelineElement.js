@@ -17,13 +17,15 @@ export default function TimelineELement(props) {
         <Box className={styles.timelineDate}>
           <span>{date}</span>
         </Box>
-        <Box>
+        <Box w="100%">
           <b>{title}</b>
           <Text>{description}</Text>
           <hr></hr>
-          <Box>
+          <Box className={styles.skillsContainer}>
             {skills.map((skill) => (
-              <Button background="green.600">{skill}</Button>
+              <Box w="100%">
+                <Button background="green.600">{skill}</Button>
+              </Box>
             ))}
           </Box>
         </Box>

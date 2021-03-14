@@ -154,6 +154,28 @@
   left: 0;
 }
 
+.contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 80px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact.fullScreen {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  left: 0;
+}
+
 @media only screen and (max-width: 1180px) {
   .main, .about {
     -ms-grid-columns: auto;
@@ -279,5 +301,25 @@
   .timelinesContainer {
     overflow-y: auto;
   }
+}
+
+.skillsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-auto-rows: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsContainer button {
+  margin: 0;
+  width: 100%;
+  margin: 5px 0 5px 0;
 }
 /*# sourceMappingURL=Global.module.css.map */
