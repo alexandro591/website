@@ -208,6 +208,24 @@ $main-secondarycolor: rgb(12, 174, 112);
     font-size: 20px;
   }
 
+  .socialNetworks {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    svg {
+      width: 100px;
+      height: 100px;
+      transition: 0.5s;
+      color: rgb(47, 255, 141);
+      &:hover {
+        transition: 0.5s;
+        transform: scale(1.2);
+      }
+    }
+  }
+
   padding: 2%;
 }
 

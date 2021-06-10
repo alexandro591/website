@@ -1,6 +1,6 @@
-import styles from "../styles/Global.module.css";
-import { useContext, useEffect, useRef, useState } from "react";
-import { ViewRouteContext } from "../context/ViewRoute";
+import styles from '../styles/Global.module.css';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { ViewRouteContext } from '../context/ViewRoute';
 import {
   Box,
   Image,
@@ -9,7 +9,7 @@ import {
   IconMdPerson,
   IconMdInsertDriveFile,
   IconMdMyLocation,
-} from "../shared/chakra";
+} from '../shared/chakra';
 export default function NavBar(props) {
   const { navVisitble } = props;
   const [playerStatus, setPlayerStatus] = useState(false);
@@ -30,15 +30,15 @@ export default function NavBar(props) {
     <>
       <Box
         className={styles.navbar}
-        left={!navVisitble ? "-80px" : "0"}
-        transform={!navVisitble ? "scale(0)" : "scale(1)"}
+        left={!navVisitble ? '-80px' : '0'}
+        transform={!navVisitble ? 'scale(0)' : 'scale(1)'}
       >
-        <Box w="100px">
+        <Box w='100px'>
           <Image
-            src="/logo.png"
-            className={playerStatus ? "playerOn" : ""}
+            src='/logo.png'
+            className={playerStatus ? 'playerOn' : ''}
             onClick={(e) => {
-              if (!audio) setAudio(new Audio("/song.mp3"));
+              if (!audio) setAudio(new Audio('/song.mp3'));
               else {
                 if (playerStatus) {
                   audio.pause();
@@ -58,9 +58,9 @@ export default function NavBar(props) {
         <Box className={styles.navbar_options}>
           <Box>
             <Text
-              className={viewRoute === "home" ? styles.select : ""}
+              className={viewRoute === 'home' ? styles.select : ''}
               onClick={(e) => {
-                setViewRoute("home");
+                setViewRoute('home');
               }}
             >
               <IconMdHome></IconMdHome>
@@ -68,9 +68,9 @@ export default function NavBar(props) {
           </Box>
           <Box>
             <Text
-              className={viewRoute === "about" ? styles.select : ""}
+              className={viewRoute === 'about' ? styles.select : ''}
               onClick={(e) => {
-                setViewRoute("about");
+                setViewRoute('about');
               }}
             >
               <IconMdPerson></IconMdPerson>
@@ -78,18 +78,18 @@ export default function NavBar(props) {
           </Box>
           <Box
             onClick={(e) => {
-              window.open("/Alexandro Tapia - CV.pdf");
+              window.open('/Alexandro Tapia - CV.pdf');
             }}
           >
-            <Text className={viewRoute === "resume" ? styles.select : ""}>
+            <Text className={viewRoute === 'resume' ? styles.select : ''}>
               <IconMdInsertDriveFile></IconMdInsertDriveFile>
             </Text>
           </Box>
           <Box>
             <Text
-              className={viewRoute === "contact" ? styles.select : ""}
+              className={viewRoute === 'contact' ? styles.select : ''}
               onClick={(e) => {
-                setViewRoute("contact");
+                setViewRoute('contact');
               }}
             >
               <IconMdMyLocation></IconMdMyLocation>
